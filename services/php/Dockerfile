@@ -18,12 +18,13 @@ RUN chmod +x install.sh \
     && ls -la /tmp \
     && mv /tmp/.ssh /root \
     && apk  add openssh-client \
+#    && apk  add autossh \
     && ls -la /root/.ssh \
+    && chmod 600 /root/.ssh/ali.pem \
     && chmod +x /tmp/init.sh \
     && rm -rf /tmp/extensions
 
-#CMD ["sh","/root/.ssh/init.sh"]
-#CMD ssh -fNCg ali  -L  3306:127.0.0.1:3306    39.97.182.45
+#CMD /bin/sh  /tmp/init.sh
 
 
 RUN apk  add tzdata \
