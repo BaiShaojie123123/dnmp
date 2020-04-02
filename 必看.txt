@@ -7,8 +7,13 @@ dmysql
 dredis
 
 cp -r /Users/baishaojie/dnmp/bash.alias.sample ~/.dnmp_zsh
-打开~/.bashrc或者~/.zshrc文件，加上  source ~/.dnmp_zsh
-source ~/.zshrc
+打开~/.bashrc或者~/.zshrc文件，
+vi ~/.zshrc
+加上  source ~/.dnmp_zsh
+执行
+source ~/.dnmp_zsh
+
+
 
 
 建立隧道

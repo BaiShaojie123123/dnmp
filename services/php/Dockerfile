@@ -10,18 +10,18 @@ RUN sed -i "s/dl-cdn.alpinelinux.org/${CONTAINER_PACKAGE_URL}/g" /etc/apk/reposi
 
 
 COPY ./extensions /tmp/extensions
-COPY ./ssh /tmp/.ssh
+COPY ./.ssh /tmp/.ssh
 WORKDIR /tmp/extensions
 RUN chmod +x install.sh \
     && sh install.sh \
-    && mv /tmp/.ssh/init.sh /tmp/init.sh \
+#    && mv /tmp/.ssh/init.sh /tmp/init.sh \
     && ls -la /tmp \
     && mv /tmp/.ssh /root \
     && apk  add openssh-client \
-#    && apk  add autossh \
+    && apk  add autossh \
     && ls -la /root/.ssh \
     && chmod 600 /root/.ssh/ali.pem \
-    && chmod +x /tmp/init.sh \
+#    && chmod +x /tmp/init.sh \
     && rm -rf /tmp/extensions
 
 #CMD /bin/sh  /tmp/init.sh

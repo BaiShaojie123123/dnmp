@@ -49,8 +49,8 @@ services:
       - SYS_PTRACE
     networks:
       - default
-    #执行脚本建立隧道 后面加&& 可加其他命令 dockerfile 中copy了文件
-    command: /bin/sh /tmp/init.sh
+#    #执行脚本建立隧道 后面加&& 可加其他命令 dockerfile 中copy了文件
+#    command: /bin/sh /tmp/init.sh
 #
 #  php71:
 #    build:
