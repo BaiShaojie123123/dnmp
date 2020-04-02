@@ -1,0 +1,38 @@
+简短命令  dphp 进入 php容器
+dnginx
+dphp
+dphp56
+dphp54
+dmysql
+dredis
+
+cp -r /Users/baishaojie/dnmp/bash.alias.sample ~/.dnmp_zsh
+打开~/.bashrc或者~/.zshrc文件，加上  source ~/.dnmp_zsh
+source ~/.zshrc
+
+
+建立隧道
+进入目录复制ssh目录到 services/php下
+cd /Users/baishaojie/dnmp/services/php
+如果有.ssh 目录留作备份,没有的话会 mv: .ssh: No such file or directory  不必管
+mv .ssh .ssh_bak ;cp -rf ~/.ssh .ssh
+
+修改docker file 或者 docker-compose.yml 后
+docker-compose build --no-cache
+docker-compose up
+dphp
+autossh -M 0 -fNCg alim ; autossh -M 0 -fNCg alir ;
+
+
+
+常用命令 删除所有
+docker-compose down
+
+
+
+
+权限问题
+dphp
+chmod -R 775 www
+chgrp -hR www-data www
+php-fpm.d
