@@ -7,13 +7,12 @@ dmysql
 dredis
 
 cp -r /Users/baishaojie/dnmp/bash.alias.sample ~/.dnmp_zsh
-打开~/.bashrc 或者 ~/.zshrc 文件，
-vi ~/.bashrc
+打开~/.bashrc或者~/.zshrc文件，
+vi ~/.zshrc
 加上  source ~/.dnmp_zsh
-执行
 source ~/.dnmp_zsh
-
-
+执行
+source
 
 
 建立隧道
@@ -32,8 +31,10 @@ autossh -M 0 -fNCg alim ; autossh -M 0 -fNCg alir ;
 
 常用命令 删除所有
 docker-compose down
+修改了dockerfile docker-compose.yml env 需要执行重新build
 
-
+docker-compose build --no-cache nginx
+docker-compose build --no-cache php
 
 
 权限问题
