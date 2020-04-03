@@ -1,4 +1,4 @@
 .idea
-/www
+/www/*
 /services/php/.ssh
 /services/php/.ssh_bak
